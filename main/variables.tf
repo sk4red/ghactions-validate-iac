@@ -29,8 +29,8 @@ variable "capacity" {
   type        = string
   default     = "1"
 }
-variable "ARM_USE_AZUREAD" {
-  description = " Should AzureAD Authentication be used to access the Blob Storage Account"
-  default = false
 
+variable "ARM_USE_AZUREAD" {
+  description = "Should AzureAD Authentication be used to access the Blob Storage Account."
+  default     = false
 }

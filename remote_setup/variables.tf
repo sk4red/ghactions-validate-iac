@@ -26,5 +26,5 @@ variable "terraform_version" {
 
 variable "ARM_STORAGE_USE_AZUREAD" {
   description = "Should the AzureRM Provider use AzureAD to connect to the Storage Blob & Queue API's, rather than the SharedKey from the Storage Account"
-  default = false
+  default     = false
 }
