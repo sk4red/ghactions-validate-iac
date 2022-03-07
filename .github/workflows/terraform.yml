@@ -39,6 +39,7 @@ jobs:
         RESOURCE_GROUP: ${{ secrets.RESOURCE_GROUP }}
         STORAGE_ACCOUNT: ${{ secrets.STORAGE_ACCOUNT }}
         CONTAINER_NAME: ${{ secrets.CONTAINER_NAME }}
+        ARM_PROVIDER_THREEPOINTZERO_RESOURCES: true
       run: terraform init -backend-config="storage_account_name=$STORAGE_ACCOUNT" -backend-config="container_name=$CONTAINER_NAME" -backend-config="resource_group_name=$RESOURCE_GROUP"
 
     # Run a terraform fmt for push and PR on non-main branch
@@ -64,6 +65,7 @@ jobs:
         ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
         TF_VAR_ARM_USE_AZUREAD: ${{ secrets.ARM_STORAGE_USE_AZUREAD }}
         ARM_USE_AZUREAD: ${{ secrets.ARM_STORAGE_USE_AZUREAD }}
+        ARM_PROVIDER_THREEPOINTZERO_RESOURCES: true
       if: github.event_name == 'pull_request'
       run: terraform plan -no-color
 
@@ -127,4 +129,5 @@ jobs:
         ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
         TF_VAR_ARM_USE_AZUREAD: ${{ secrets.ARM_STORAGE_USE_AZUREAD }}
         ARM_USE_AZUREAD: ${{ secrets.ARM_STORAGE_USE_AZUREAD }}
+        ARM_PROVIDER_THREEPOINTZERO_RESOURCES: true
       run: terraform apply -auto-approve
