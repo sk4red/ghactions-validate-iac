@@ -42,10 +42,12 @@ resource "azurerm_app_service" "app_service" {
   app_service_plan_id = azurerm_app_service_plan.app_service.id
   https_only          = true
 
-  source_control {
-    repo_url           = "https://github.com/Azure-Samples/nodejs-docs-hello-world.git"
-    branch             = "main"
-    manual_integration = true
-    use_mercurial      = false
-  }
+  site_config {}
+
+}
+
+resource "azurerm_app_service_source_control" "app_service_scm" {
+  app_id   = azurerm_app_service.app_service.id
+  repo_url = "https://github.com/Azure-Samples/nodejs-docs-hello-world.git"
+  branch   = "main"
 }
