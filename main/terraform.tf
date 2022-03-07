@@ -9,7 +9,7 @@ terraform {
     }
   }
   backend "azurerm" {
-    use_azuread_auth =  var.ARM_USE_AZUREAD
+    #use_azuread_auth =  var.ARM_USE_AZUREAD
     key = "app.terraform.tfstate"
  
   }
