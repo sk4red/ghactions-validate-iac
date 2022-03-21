@@ -25,6 +25,5 @@ terraform {
 
 provider "azurerm" {
   features {}
-  storage_use_azuread = var.ARM_STORAGE_USE_AZUREAD
 }
 

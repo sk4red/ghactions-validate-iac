@@ -3,13 +3,13 @@
 #############################################################################
 
 variable "location" {
-  description = "(Optional) Region where the Azure resources will be created. Defaults to East US."
+  description = "(Optional) Region where the Azure resources will be created. Defaults to UK South."
   type        = string
-  default     = "eastus"
+  default     = "uksouth"
 }
 
 variable "naming_prefix" {
-  description = "(Optional) Naming prefix used for resources. Defaults to adolabs."
+  description = "(Optional) Naming prefix used for resources. Defaults to ghactions."
   type        = string
   default     = "ghactions"
 }
@@ -30,7 +30,3 @@ variable "capacity" {
   default     = "1"
 }
 
-variable "ARM_USE_AZUREAD" {
-  description = "Should AzureAD Authentication be used to access the Blob Storage Account."
-  default     = false
-}

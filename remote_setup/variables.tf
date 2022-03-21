@@ -3,7 +3,7 @@
 #############################################################################
 
 variable "location" {
-  description = "(Optional) Region where the Azure resources will be created. Defaults to East US."
+  description = "(Optional) Region where the Azure resources will be created. Defaults to UK South."
   type        = string
   default     = "uksouth"
 }
@@ -24,7 +24,4 @@ variable "terraform_version" {
   type        = string
 }
 
-variable "ARM_STORAGE_USE_AZUREAD" {
-  description = "Should the AzureRM Provider use AzureAD to connect to the Storage Blob & Queue API's, rather than the SharedKey from the Storage Account"
-  default     = false
-}
+

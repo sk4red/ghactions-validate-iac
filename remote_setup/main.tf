@@ -61,7 +61,6 @@ resource "azurerm_storage_account" "sa" {
   account_tier              = "Standard"
   account_replication_type  = "LRS"
   min_tls_version           = "TLS1_2"
-  shared_access_key_enabled = var.ARM_STORAGE_USE_AZUREAD ? false : true
   enable_https_traffic_only = true
 
 }
@@ -84,7 +83,6 @@ resource "github_actions_secret" "actions_secret" {
     ARM_SUBSCRIPTION_ID     = data.azurerm_subscription.current.subscription_id
     ARM_TENANT_ID           = data.azuread_client_config.current.tenant_id
     TERRAFORM_VERSION       = var.terraform_version
-    ARM_STORAGE_USE_AZUREAD = var.ARM_STORAGE_USE_AZUREAD
   }
 
   repository      = var.github_repository
