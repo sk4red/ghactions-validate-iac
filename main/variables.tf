@@ -20,7 +20,7 @@ variable "asp_tier" {
 }
 
 variable "asp_size" {
-  description = "(Required) Size for App Service Plan (S2, P1v2)."
+  description = "(Required) Size for App Service Plan (S1, S2, P1v2)."
   type        = string
 }
 
