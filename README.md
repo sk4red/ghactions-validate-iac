@@ -43,8 +43,6 @@ az account set --s SUBSCRIPTION_NAME
 # Go into the remote setup directory
 cd remote_setup
 
-# If you want to disable SAS keys on the storage account for the terraform state file uncomment this line
-#export TF_VAR_ARM_STORAGE_USE_AZUREAD=true
 # Initialize and apply the code
 # If you use a different repository name, you'll need to specify -var=github_repository=NAME_OF_YOUR_REPO
 # or change the value in terraform.tfvars
