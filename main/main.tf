@@ -50,5 +50,10 @@ resource "azurerm_app_service" "app_service" {
     use_mercurial      = false
   }
 }
-
+resource "azurerm_app_service_source_control" "example" {
+  app_service_id        = "${azurerm_app_service.app_service.id}"
+  repo_url              = "https://github.com/sk4red/python-docs-hello-world"
+  is_manual_integration = true
+  branch                = "main"
+}
 #test
