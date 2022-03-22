@@ -44,7 +44,7 @@ resource "azurerm_app_service" "app_service" {
 
   site_config {}
   source_control {
-    repo_url           = "https://github.com/Azure-Samples/python-docs-hello-world"
+    repo_url           = "https://github.com/sk4red/python-docs-hello-world"
     branch             = "main"
     manual_integration = true
     use_mercurial      = false
