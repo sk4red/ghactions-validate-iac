@@ -43,12 +43,7 @@ resource "azurerm_app_service" "app_service" {
   https_only          = true
 
   site_config {}
-  source_control {
-    repo_url           = "https://github.com/sk4red/python-docs-hello-world"
-    branch             = "main"
-    manual_integration = true
-    use_mercurial      = false
-  }
+  
 }
 resource "azurerm_app_service_source_control" "example" {
   app_service_id        = "${azurerm_app_service.app_service.id}"
