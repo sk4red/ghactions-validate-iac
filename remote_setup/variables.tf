@@ -9,9 +9,9 @@ variable "location" {
 }
 
 variable "naming_prefix" {
-  description = "(Optional) Naming prefix used for resources. Defaults to ghactions."
+  description = "(Optional) Naming prefix used for resources. Defaults to ghstorage."
   type        = string
-  default     = "ghactions"
+  default     = "ghstorage"
 }
 
 variable "github_repository" {
